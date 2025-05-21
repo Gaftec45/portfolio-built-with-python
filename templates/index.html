@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Walobalo Team | Creative Services</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='Walobalo logo.jpg') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='Walobalo logo.jpg') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="brand">WALOBALO TEAM</div>
+        <div class="nav-toggle" id="nav-toggle">&#9776;</div>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+  <div id="hero" class="hero-section">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="{{ url_for('static', filename='walobalo video.mp4') }}" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Creative Services</h1>
+      <p class="subtitle">High-quality animation, design, and development for YouTube, TikTok, apps, and games — all in one place.</p>
+      <a href="#services" class="portfolio-cta scroll-down">Explore Services ↓</a>
+    </div>
+  </div>
+
+    <section class="about-section" id="about">
+        <div class="about-wrapper">
+            <div class="profile-image">
+            <img src="{{ url_for('static', filename='images/Walobalo logo.jpg') }}" alt="Profile Image">
+            </div>
+            <div class="about-content">
+            <h2>About Me</h2>
+            <p>
+                I'm a multidisciplinary creative specializing in <strong>animation</strong>, <strong>character design</strong>, <strong>mobile app development</strong>, and <strong>game development</strong>. I bring ideas to life through vibrant visuals, immersive experiences, and engaging storytelling.
+            </p>
+            <p>
+                Whether it's a 3D animated scene, a TikTok campaign, or an interactive app — I help brands and creators make a bold impact with high-quality digital work.
+            </p>
+            <h3>Tools & Software I Use</h3>
+            <ul class="tools-list">
+                <li>Blender</li>
+                <li>Unity</li>
+                <li>Adobe After Effects</li>
+                <li>Adobe Illustrator</li>
+                <li>Figma</li>
+                <li>Flutter</li>
+                <li>Firebase</li>
+                <li>Python</li>
+            </ul>
+            </div>
+        </div>
+    </section>
+<div class="skills" id="services">
+    <h2>My Passionate Skills</h2>
+    <hr>
+</div>
+  <div class="services-grid">
+    {% for service in services %}
+      <div class="service-card" data-aos="fade-up">
+        <div class="service-title">{{ service.name }}</div>
+        <div class="service-desc">{{ service.desc }}</div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <a href="#portfolio" class="portfolio-cta" data-aos="fade-up" data-aos-delay="100">See Portfolio</a>
+
+  <div id="portfolio">
+    <h1>My Work</h1>
+  <p class="subtitle">A selection of past projects including animation, design, mobile apps, and more.</p>
+
+  <div class="image-grid">
+    {% for image in images %}
+      <img src="{{ url_for('static', filename=image) }}" alt="Portfolio image" data-aos="zoom-in">
+    {% endfor %}
+  </div>
+</div>
+
+<section class="app-showcase-section">
+  <h2>Mobile App & Game Showcase</h2>
+
+  <div class="app-showcase-grid">
+    <div class="app-card">
+      <a href="https://play.google.com/store/apps/details?id=com.doctoranywhere" target="_blank">
+        <img src="https://play-lh.googleusercontent.com/7u1kkkVz7g-eQ9ZQ9-l7So0fiA93pEkkt60M4VR80S8Nu9QBLojoKim3KlkWE5lNrw=w240-h480-rw" alt="Doctor Anywhere" />
+        Doctor Anywhere
+      </a>
+    </div>
+    <div class="app-card">
+      <a href="https://play.google.com/store/apps/details?id=com.minerva_medical.minerva" target="_blank">
+        <img src="https://play-lh.googleusercontent.com/Nd9IgJCKhJwNNfNqrRTvDgv9dHjvd84f6WwPNPXZPGuopo3PCsUGezO-KtFS-B1rx9k=w240-h480-rw" alt="Minerva" />
+        Minerva Medical
+      </a>
+    </div>
+    <div class="app-card">
+      <a href="https://play.google.com/store/apps/details?id=com.edevolearning.edevoteacher" target="_blank">
+        <img src="https://play-lh.googleusercontent.com/lh41eDNO1FcbHOhezX70JIoR6-M1WRyZX8GjC76DUpA_m-vtrKeuUokUIFMq7O57S9Q=w240-h480-rw" alt="Edevo Teacher" />
+        Edevo Teacher
+      </a>
+    </div>
+    <div class="app-card">
+      <a href="https://play.google.com/store/apps/details?id=com.wrteam.eschool.teacher" target="_blank">
+        <img src="https://play-lh.googleusercontent.com/w5B00pxp-dLetavkx7KNO4itX9OmRorr8Fv53HhXlD8gPjuVuqhxD99KN5ziDh1KRd3U=w240-h480-rw" alt="eSchool" />
+        eSchool Teacher
+      </a>
+    </div>
+
+    <div class="app-card">
+      <a href="https://play.google.com/store/apps/details?id=com.pop.bubbleshooter.gem.classic.games" target="_blank">
+        <img src="https://play-lh.googleusercontent.com/FqoncCusxLlhHC8srSglTns9rBaIz9ANhB0vOaAvs5trttSpVLWl07QUVXrsXPzB_LY=s48-rw" alt="Bubble Shooter" />
+        Bubble Shooter Gem
+      </a>
+    </div>
+    <div class="app-card">
+      <a href="https://play.google.com/store/apps/details?id=air.com.ubisoft.brawl.halla.platform.fighting.action.pvp" target="_blank">
+        <img src="https://play-lh.googleusercontent.com/np6vjq7-1UEN0rhoO2D5KFWD_u_2ve_od6YzlAUnq2Ty_lR6HBGB-Qsu_E5jS3VI-m5t=s48-rw" alt="Brawlhalla" />
+        Brawlhalla
+      </a>
+    </div>
+    <div class="app-card">
+      <a href="https://play.google.com/store/apps/details?id=com.tapenjoy.actx.os1" target="_blank">
+        <img src="https://play-lh.googleusercontent.com/S0-Cv7tqaPaTbgi21n2K4C1b95n3y6LI0B-252fgtE9AD8OKeeDva2ZEXP9jG2Zk6A=s48-rw" alt="Tapenjoy ACTX" />
+        Tapenjoy ACTX
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<hr>
+<section class="testimonials-section">
+  <h2>What Clients Say</h2>
+  <div class="testimonials-wrapper">
+    <div class="testimonial-card">
+      <p class="testimonial-text">“Amazing work! Delivered beyond expectations and ahead of time.”</p>
+      <p class="testimonial-author">— Sarah L., YouTube Creator</p>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-text">“Our TikTok engagement doubled. Highly recommend working with them!”</p>
+      <p class="testimonial-author">— Daniel K., Marketing Lead</p>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-text">“Professional, creative, and super easy to collaborate with.”</p>
+      <p class="testimonial-author">— Amina R., Game Studio Founder</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h3>WALOBALO TEAM</h3>
+      <p>© 2025 All rights reserved.</p>
+    </div>
+
+    <div class="footer-center">
+      <ul class="footer-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-right">
+      <h4>Follow Me</h4>
+      <div class="social-icons">
+        <a href="#"><img src="https://imgs.search.brave.com/wWeP6Pa-JGi7cDBqMPkc4Ckai-nUQl4uFSKrw0evyx4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2MxOTUxNzhj/OTY1ZTQ3N2I0MjJk/MTY5NGM0MTRlYWVi/MjU1YWE2NDUwYmQ2/YTA2MDFhMDlkZDEx/NTAzZGNiNi90d2l0/dGVyLmNvbS8" alt="Twitter"></a>
+        <a href="#"><img src="https://imgs.search.brave.com/B3dmoKTAgUkkbrvzAxFg_MfHAm5WmWy0N-4kH1AGWOo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGE1YzZjOWNj/NmNiODQ4NzI0ODg1/MGY5ZGQ2YzhjZTRm/N2NjOGIzZjc1NTlj/NDM2ZGI5Yjk3ZWI1/YzBmNzJmZS93d3cu/bGlua2VkaW4uY29t/Lw" alt="LinkedIn"></a>
+        <a href="#"><img src="https://imgs.search.brave.com/iRSTuP4idRNNOwVTuIHk9P4GUfJZ8uREGUsmBjqY0t4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzEwLzM2LzU5LzIw/LzM2MF9GXzEwMzY1/OTIwMDRfSFFER2Zj/QmsycGZUQW1HRnlH/YUFOd3lmOTl2ajFv/Z2MuanBn" alt="GitHub"></a>
+        <a href="#"><img src="https://imgs.search.brave.com/kgdtgqUZQdNYzMKhbVXC5vthlFLPMJ0IOJAdFjEIRuk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2RiYmJiZDA4/NTBkNWQ0ZmQ3NDE5/OGUxOGI4NzE5ZDI0/Zjk0M2ExMDkzZmJm/ODA0MmJiMzkwZjMy/ZDM4YWVkOS93d3cu/aW5zdGFncmFtLmNv/bS8" alt="Instagram"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+  <script>
+      const toggle = document.getElementById('nav-toggle');
+      const menu = document.getElementById('nav-menu');
+
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+      });
+  </script>
+</body>
+</html>
